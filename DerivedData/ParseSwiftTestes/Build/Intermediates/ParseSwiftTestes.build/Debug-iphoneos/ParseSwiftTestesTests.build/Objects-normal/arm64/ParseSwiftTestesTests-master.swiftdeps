@@ -1,0 +1,4 @@
+version: "Apple Swift version 1.2 (swiftlang-602.0.49.6 clang-602.0.49)"
+options: "3ebc6600ec9fef060c30b956236611ab"
+inputs: 
+- "/Users/ramonhonorio/Documents/Centro iOS/XCode Projects/Book3-Swift/ParseSwiftTestes/ParseSwiftTestesTests/ParseSwiftTestesTests.swift"
