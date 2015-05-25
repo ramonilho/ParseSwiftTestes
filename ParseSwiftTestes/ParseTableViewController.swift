@@ -20,25 +20,25 @@ class ParseTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        // Teste de insercao
-        var perfil = PFObject(className: "perfil")
-        perfil["nome"] = "-- Insercao via codigo --"
-        perfil["email"] = "code@email.com"
-        perfil["senha"] = "1234"
-        perfil.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError?) -> Void in
-            if(success) {
-                // O objeto foi salvo
-                println("OK, perfil salvo")
-            } else {
-                // Ocorreu algum erro
-                println("[ERRO]: "+error!.description)
-            }
-            
-        }
+//        // Teste de insercao
+//        var perfil = PFObject(className: "perfil")
+//        perfil["nome"] = "-- Insercao via codigo --"
+//        perfil["email"] = "code@email.com"
+//        perfil["senha"] = "1234"
+//        perfil.saveInBackgroundWithBlock {
+//            (success: Bool, error: NSError?) -> Void in
+//            if(success) {
+//                // O objeto foi salvo
+//                println("OK, perfil salvo")
+//            } else {
+//                // Ocorreu algum erro
+//                println("[ERRO]: "+error!.description)
+//            }
+//            
+//        }
         
 //        // Teste de requisicao
-//        var query = PFQuery(className:"Perfil")
+//        var query = PFQuery(className:"perfil")
 //        query.findObjectsInBackgroundWithBlock{
 //            (objects: [AnyObject]?, error: NSError?) -> Void in
 //            println("Foram encontrados \(objects!.count) registros")
@@ -67,11 +67,11 @@ class ParseTableViewController: UITableViewController {
 //            }
 //        }
         
-//        let usuario = getPerfil("KnHdnG0Vty")
-//        let tutorial = PFObject(className: "Tutorial")
-//        tutorial["idPerfil"] = usuario
-//        tutorial["Titulo"] = "-- Teste --"
-//        tutorial["Descricao"] = "Descricao teste"
+//        let usuario = getPerfil("Pw43MPXNzh")
+//        let tutorial = PFObject(className: "tutorial")
+//        tutorial["id_perfil"] = usuario
+//        tutorial["titulo"] = "-- Teste Tutorial --"
+//        tutorial["descricao"] = "Descricao teste"
 //        tutorial.saveInBackgroundWithBlock{
 //            (success: Bool, error: NSError?) -> Void in
 //            
@@ -81,6 +81,54 @@ class ParseTableViewController: UITableViewController {
 //                println("[ERRO]: \(error!.userInfo)")
 //            }
 //        }
+        
+//        // Teste insercao TUTORIAL
+//        let usuario = getRegistro("phLkX3l7RN", tabela: "perfil")
+//        let tutorial = PFObject(className: "tutorial")
+//        tutorial["id_perfil"] = usuario
+//        tutorial["titulo"] = "Tutorial 02"
+//        tutorial["descricao"] = "Descricao"
+//        tutorial.saveInBackgroundWithBlock{
+//            (success: Bool, error: NSError?) -> Void in
+//            
+//            if(success){
+//                println("Mais um tutorial foi inserido")
+//            } else {
+//                println("[ERRO]: \(error!.userInfo)")
+//            }
+//        }
+        
+//        // Teste insercao PASSO
+//        let tutorial = getRegistro("UQ3tdOb7jK", tabela: "tutorial")
+//        let passo = PFObject(className: "passo")
+//        passo["id_tutorial"] = tutorial
+//        passo["descricao"] = "Este é o primeiro passo"
+//        passo["numero_passo"] = 1
+//        passo.saveInBackgroundWithBlock{
+//            (success: Bool, error: NSError?) -> Void in
+//            
+//            if(success){
+//                println("Passo inserido")
+//            }else {
+//                println("[ERRO]: \(error!.userInfo)")
+//            }
+//        }
+        
+        // Teste query PASSOS
+        var query = PFQuery(className: "passo")
+        let tutorial = getRegistro("aRx04vKWtS", tabela: "tutorial")
+        query.whereKey("id_tutorial", equalTo: tutorial)
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+
+            if let objects = objects as? [PFObject] {
+                for obj in objects {
+                    println(obj)
+                }
+            } else {
+                println("[ERRO]: \(error!.userInfo)")
+            }
+        }
 
     }
 
@@ -158,10 +206,9 @@ class ParseTableViewController: UITableViewController {
     }
     */
     
-    func getPerfil(idPerfil: String) -> PFObject? {
-        // Teste query com parametro
-        var query = PFQuery(className: "Perfil")
-        query.whereKey("objectId", equalTo: idPerfil)
-        return query.getFirstObject()
+    func getRegistro(idRegistro: String, tabela: String) -> PFObject {
+        var query = PFQuery(className: tabela)
+        query.whereKey("objectId", equalTo: idRegistro)
+        return query.getFirstObject()!
     }
 }
