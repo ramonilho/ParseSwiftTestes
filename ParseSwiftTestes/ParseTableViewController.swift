@@ -19,15 +19,12 @@ class ParseTableViewController: UITableViewController {
         u.email = "ramodn@email.com"
         u.senha = "1234"
         
-        var user:Usuario = cloud.usuarioExiste(u)!
-        if(user.email == "" && user.senha == "")
-        {
-            println("---------ERROR------------")
-        }else{
+        if var user:Usuario = cloud.usuarioExiste(u) {
             println("---------" + user.email + "------------")
+            
+        } else{
+            println("--------- User not found ------------")
         }
-        
-        //println("---------" + user.email + "------------")
         
         cloud.listaUsuario(self)
     }

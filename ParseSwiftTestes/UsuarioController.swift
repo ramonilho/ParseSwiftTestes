@@ -20,9 +20,7 @@ class UsuarioController: NSObject {
         query.whereKey("email", equalTo: u.email)
         query.whereKey("senha", equalTo: u.senha)
         
-        var objeto: AnyObject = query.getFirstObject() as PFObject? as! AnyObject
-        
-        if(!objeto.isEqual(nil)){
+        if var objeto: AnyObject = query.getFirstObject() as PFObject? as? AnyObject {
             usuario.email = objeto["email"] as! String
             usuario.senha = objeto["senha"] as! String
             return usuario
