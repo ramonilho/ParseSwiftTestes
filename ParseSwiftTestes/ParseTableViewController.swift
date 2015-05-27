@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ParseTableViewController: UITableViewController {
+class ParseTableViewController: UITableViewController, UsuarioControllerProtocol {
     var array = [Usuario]()
     var cloud = UsuarioController()
     
@@ -18,20 +18,24 @@ class ParseTableViewController: UITableViewController {
         var u = Usuario()
         u.email = "ramon@email.com"
         u.senha = "1234"
+        cloud.delegate = self
+//        if var user:Usuario = cloud.usuarioExiste(u) {
+//            println("---------" + user.email + "------------")
+//            
+//        } else{
+//            println("--------- User not found ------------")
+//        }
         
-        if var user:Usuario = cloud.usuarioExiste(u) {
-            println("---------" + user.email + "------------")
-            
-        } else{
-            println("--------- User not found ------------")
-        }
-        
-        cloud.listaUsuario(self)
+        cloud.listaUsuario()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func saveFinished(array : Array<Usuario>){
+        self.array = array
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source

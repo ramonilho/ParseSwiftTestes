@@ -9,9 +9,14 @@
 import UIKit
 import Parse
 
+protocol UsuarioControllerProtocol {
+    func saveFinished(array : Array<Usuario>)
+    
+}
 
 class UsuarioController: NSObject {
-   
+    var delegate : UsuarioControllerProtocol?
+    var array : Array<Usuario> = []
     func usuarioExiste(let u:Usuario) -> Usuario?
     {
         var usuario = Usuario()
@@ -30,7 +35,7 @@ class UsuarioController: NSObject {
     }
     
     
-    func listaUsuario(let tela:ParseTableViewController){
+    func listaUsuario(){
         var query = PFQuery(className: "perfil")
         //query.limit = 4
         query.skip = 1
@@ -50,14 +55,14 @@ class UsuarioController: NSObject {
                     }
                     
                     
-                    tela.array.append(u)
+                    self.array.append(u)
                     
                     //self.tableView.reloadData()
                     
-                    tela.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
                     
                     //println(u.email)
                 }
+                self.delegate?.saveFinished(self.array)
             } else {
                 //println("[ERRO]: \(error!.userInfo)")
             }
