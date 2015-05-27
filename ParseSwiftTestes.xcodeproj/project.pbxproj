@@ -30,6 +30,8 @@
 		1866D3601B123B490088FA50 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866D35F1B123B490088FA50 /* libz.dylib */; };
 		1866D3621B123B4E0088FA50 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866D3611B123B4E0088FA50 /* libsqlite3.dylib */; };
 		1866D3661B1273BA0088FA50 /* ParseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866D3651B1273BA0088FA50 /* ParseTableViewController.swift */; };
+		DB1004131B13C0D40019E5C3 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1004121B13C0D40019E5C3 /* Usuario.swift */; };
+		DB8D92BD1B14E3B20075AEB8 /* UsuarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8D92BC1B14E3B20075AEB8 /* UsuarioController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		1866D35F1B123B490088FA50 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1866D3611B123B4E0088FA50 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		1866D3651B1273BA0088FA50 /* ParseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseTableViewController.swift; sourceTree = "<group>"; };
+		DB1004121B13C0D40019E5C3 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		DB8D92BC1B14E3B20075AEB8 /* UsuarioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,8 @@
 				1866D3291B123A900088FA50 /* LaunchScreen.xib */,
 				1866D31B1B123A900088FA50 /* Supporting Files */,
 				1866D3651B1273BA0088FA50 /* ParseTableViewController.swift */,
+				DB1004121B13C0D40019E5C3 /* Usuario.swift */,
+				DB8D92BC1B14E3B20075AEB8 /* UsuarioController.swift */,
 			);
 			path = ParseSwiftTestes;
 			sourceTree = "<group>";
@@ -237,6 +243,7 @@
 				TargetAttributes = {
 					1866D3171B123A900088FA50 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7SCH5Y74F7;
 					};
 					1866D32F1B123A900088FA50 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -288,8 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB1004131B13C0D40019E5C3 /* Usuario.swift in Sources */,
 				1866D3661B1273BA0088FA50 /* ParseTableViewController.swift in Sources */,
 				1866D3231B123A900088FA50 /* ViewController.swift in Sources */,
+				DB8D92BD1B14E3B20075AEB8 /* UsuarioController.swift in Sources */,
 				1866D31E1B123A900088FA50 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,7 +427,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ramon Honorio (JRZ3396N7C)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -426,6 +436,7 @@
 				INFOPLIST_FILE = ParseSwiftTestes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -433,7 +444,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ramon Honorio (JRZ3396N7C)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -441,6 +453,7 @@
 				INFOPLIST_FILE = ParseSwiftTestes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -497,6 +510,7 @@
 				1866D33C1B123A900088FA50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1866D33D1B123A900088FA50 /* Build configuration list for PBXNativeTarget "ParseSwiftTestesTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +519,7 @@
 				1866D33F1B123A900088FA50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

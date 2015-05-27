@@ -10,78 +10,13 @@ import UIKit
 import Parse
 
 class ParseTableViewController: UITableViewController {
-
+    var array = [Usuario]()
+    var cloud = UsuarioController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        // Teste de insercao
-        var perfil = PFObject(className: "perfil")
-        perfil["nome"] = "-- Insercao via codigo --"
-        perfil["email"] = "code@email.com"
-        perfil["senha"] = "1234"
-        perfil.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError?) -> Void in
-            if(success) {
-                // O objeto foi salvo
-                println("OK, perfil salvo")
-            } else {
-                // Ocorreu algum erro
-                println("[ERRO]: "+error!.description)
-            }
-            
-        }
-        
-//        // Teste de requisicao
-//        var query = PFQuery(className:"Perfil")
-//        query.findObjectsInBackgroundWithBlock{
-//            (objects: [AnyObject]?, error: NSError?) -> Void in
-//            println("Foram encontrados \(objects!.count) registros")
-//            
-//            if let objects = objects as? [PFObject] {
-//                for obj in objects {
-//                    println(obj)
-//                }
-//            } else {
-//                println("[ERRO]: \(error!.userInfo)")
-//            }
-//        }
-        
-//        // Teste query com parametro
-//        var query = PFQuery(className: "Perfil")
-//        query.whereKey("objectId", equalTo: "KnHdnG0Vty")
-//        query.findObjectsInBackgroundWithBlock {
-//            (objects: [AnyObject]?, error: NSError?) -> Void in
-//            
-//            if let objects = objects as? [PFObject] {
-//                for obj in objects {
-//                    println(obj)
-//                }
-//            } else {
-//                println("[ERRO]: \(error!.userInfo)")
-//            }
-//        }
-        
-//        let usuario = getPerfil("KnHdnG0Vty")
-//        let tutorial = PFObject(className: "Tutorial")
-//        tutorial["idPerfil"] = usuario
-//        tutorial["Titulo"] = "-- Teste --"
-//        tutorial["Descricao"] = "Descricao teste"
-//        tutorial.saveInBackgroundWithBlock{
-//            (success: Bool, error: NSError?) -> Void in
-//            
-//            if(success){
-//                println("Mais um tutorial foi inserido")
-//            } else {
-//                println("[ERRO]: \(error!.userInfo)")
-//            }
-//        }
-
+        cloud.listaUsuario(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,24 +29,32 @@ class ParseTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return self.array.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
-
+        var imageView = cell.viewWithTag(101) as? UIImageView
+        var labelEmail = cell.viewWithTag(102) as? UILabel
+        var labelSenha = cell.viewWithTag(103) as? UILabel
+        
+        imageView?.image = self.array[indexPath.row].foto
+        labelEmail?.text = self.array[indexPath.row].email
+        labelSenha?.text = self.array[indexPath.row].senha
+        
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
