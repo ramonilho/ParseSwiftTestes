@@ -16,7 +16,7 @@ class ParseTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         var u = Usuario()
-        u.email = "ramodn@email.com"
+        u.email = "ramon@email.com"
         u.senha = "1234"
         
         if var user:Usuario = cloud.usuarioExiste(u) {
@@ -113,8 +113,23 @@ class ParseTableViewController: UITableViewController {
     
     func getPerfil(idPerfil: String) -> PFObject? {
         // Teste query com parametro
-        var query = PFQuery(className: "Perfil")
+        var query = PFQuery(className: "perfil")
         query.whereKey("objectId", equalTo: idPerfil)
         return query.getFirstObject()
+    }
+    
+    func salvarPerfilUD(user:Usuario) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let userData = NSKeyedArchiver.archivedDataWithRootObject(user)
+        
+        defaults.setObject(userData, forKey: "usuario")
+        println("Perfil salvo!!!")
+        
+    }
+    
+    func recuperarPerfilUD() -> Usuario? {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let obj = defaults.objectForKey("usuario") as! NSData
+        return NSKeyedUnarchiver.unarchiveObjectWithData(obj) as? Usuario
     }
 }

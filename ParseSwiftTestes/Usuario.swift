@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class Usuario: NSObject {
     var email:String
@@ -17,6 +18,18 @@ class Usuario: NSObject {
         email = ""
         senha = ""
         foto = UIImage()
+    }
+    
+    init(coder aDecoder: NSCoder!){
+        self.email = aDecoder.decodeObjectForKey("email") as! String
+        self.senha = aDecoder.decodeObjectForKey("senha") as! String
+        self.foto = aDecoder.decodeObjectForKey("foto") as! UIImage
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder!) {
+        aCoder.encodeObject(email, forKey: "email")
+        aCoder.encodeObject(senha, forKey: "senha")
+        aCoder.encodeObject(foto, forKey: "foto")
     }
     
 }

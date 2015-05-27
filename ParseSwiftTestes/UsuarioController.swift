@@ -30,8 +30,7 @@ class UsuarioController: NSObject {
     }
     
     
-    func listaUsuario(let tela:ParseTableViewController)
-    {
+    func listaUsuario(let tela:ParseTableViewController){
         var query = PFQuery(className: "perfil")
         //query.limit = 4
         query.skip = 1
@@ -63,7 +62,5 @@ class UsuarioController: NSObject {
                 //println("[ERRO]: \(error!.userInfo)")
             }
         }
-
-    
     }
 }
