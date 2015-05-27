@@ -12,12 +12,31 @@ import Parse
 
 class UsuarioController: NSObject {
    
+    func usuarioExiste(let u:Usuario) -> Usuario?
+    {
+        var usuario = Usuario()
+        
+        var query = PFQuery(className: "perfil")
+        query.whereKey("email", equalTo: u.email)
+        query.whereKey("senha", equalTo: u.senha)
+        
+        var objeto: AnyObject = query.getFirstObject() as PFObject? as! AnyObject
+        
+        if(!objeto.isEqual(nil)){
+            usuario.email = objeto["email"] as! String
+            usuario.senha = objeto["senha"] as! String
+            return usuario
+        }
+        
+        return nil
+    }
+    
     
     func listaUsuario(let tela:ParseTableViewController)
     {
         var query = PFQuery(className: "perfil")
         //query.limit = 4
-        query.skip = 4
+        query.skip = 1
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]?, error: NSError?) -> Void in
             

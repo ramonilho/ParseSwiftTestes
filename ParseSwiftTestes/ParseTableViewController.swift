@@ -15,6 +15,19 @@ class ParseTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var u = Usuario()
+        u.email = "ramodn@email.com"
+        u.senha = "1234"
+        
+        var user:Usuario = cloud.usuarioExiste(u)!
+        if(user.email == "" && user.senha == "")
+        {
+            println("---------ERROR------------")
+        }else{
+            println("---------" + user.email + "------------")
+        }
+        
+        //println("---------" + user.email + "------------")
         
         cloud.listaUsuario(self)
     }
