@@ -30,6 +30,9 @@
 		1866D3601B123B490088FA50 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866D35F1B123B490088FA50 /* libz.dylib */; };
 		1866D3621B123B4E0088FA50 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866D3611B123B4E0088FA50 /* libsqlite3.dylib */; };
 		1866D3661B1273BA0088FA50 /* ParseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866D3651B1273BA0088FA50 /* ParseTableViewController.swift */; };
+		1884D6E41BA0C62400FE6D89 /* OhMyZashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884D6E31BA0C62400FE6D89 /* OhMyZashTableViewController.swift */; };
+		1884D6E61BA0C99700FE6D89 /* ParseCloudTesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884D6E51BA0C99700FE6D89 /* ParseCloudTesteViewController.swift */; };
+		188983331B557F160088A03C /* Mini3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188983321B557F160088A03C /* Mini3TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		1866D35F1B123B490088FA50 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1866D3611B123B4E0088FA50 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		1866D3651B1273BA0088FA50 /* ParseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseTableViewController.swift; sourceTree = "<group>"; };
+		1884D6E31BA0C62400FE6D89 /* OhMyZashTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OhMyZashTableViewController.swift; sourceTree = "<group>"; };
+		1884D6E51BA0C99700FE6D89 /* ParseCloudTesteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseCloudTesteViewController.swift; sourceTree = "<group>"; };
+		188983321B557F160088A03C /* Mini3TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mini3TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,10 +138,13 @@
 				1866D31D1B123A900088FA50 /* AppDelegate.swift */,
 				1866D3221B123A900088FA50 /* ViewController.swift */,
 				1866D3241B123A900088FA50 /* Main.storyboard */,
+				1884D6E51BA0C99700FE6D89 /* ParseCloudTesteViewController.swift */,
 				1866D3271B123A900088FA50 /* Images.xcassets */,
 				1866D3291B123A900088FA50 /* LaunchScreen.xib */,
 				1866D31B1B123A900088FA50 /* Supporting Files */,
+				1884D6E31BA0C62400FE6D89 /* OhMyZashTableViewController.swift */,
 				1866D3651B1273BA0088FA50 /* ParseTableViewController.swift */,
+				188983321B557F160088A03C /* Mini3TableViewController.swift */,
 			);
 			path = ParseSwiftTestes;
 			sourceTree = "<group>";
@@ -288,8 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1884D6E41BA0C62400FE6D89 /* OhMyZashTableViewController.swift in Sources */,
+				188983331B557F160088A03C /* Mini3TableViewController.swift in Sources */,
 				1866D3661B1273BA0088FA50 /* ParseTableViewController.swift in Sources */,
 				1866D3231B123A900088FA50 /* ViewController.swift in Sources */,
+				1884D6E61BA0C99700FE6D89 /* ParseCloudTesteViewController.swift in Sources */,
 				1866D31E1B123A900088FA50 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +509,7 @@
 				1866D33C1B123A900088FA50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1866D33D1B123A900088FA50 /* Build configuration list for PBXNativeTarget "ParseSwiftTestesTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +518,7 @@
 				1866D33F1B123A900088FA50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

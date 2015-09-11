@@ -18,8 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        Parse.setApplicationId("Ik5SbG1Lgf87YrekCIywvyY83FPGWHAmezD8Mkrw",
-            clientKey: "dSnDb1k6bFP5DT4EtRWsClnpfiiPeBhSeDAoDu9Z")
+        Parse.enableLocalDatastore()
+        Parse.setApplicationId("dxBvflNWbE6Yc5VdlsyJehBlVu94DsUZuHGfVBlg",
+            clientKey: "lWLAjimNNLIEwkN8u5r86MvDCX5Aasma2jDHIRmC")
         
         // Register for Push Notitications
         if application.applicationState != UIApplicationState.Background {
@@ -136,8 +137,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         let installation = PFInstallation.currentInstallation()
+        installation["user"] = PFUser.currentUser()
         installation.setDeviceTokenFromData(deviceToken)
-        installation.saveInBackgroundWithBlock(nil)
+        installation.saveInBackgroundWithBlock { (success, error) -> Void in
+            if error != nil {
+                println("Ocorreu um erro: \(error?.description)")
+            }
+        }
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {

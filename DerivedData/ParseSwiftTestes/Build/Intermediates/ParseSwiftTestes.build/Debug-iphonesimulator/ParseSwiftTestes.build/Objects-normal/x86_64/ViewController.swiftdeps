@@ -9,9 +9,9 @@ class-members:
 top-level:
 - "UIViewController"
 member-access:
-- "PSs9AnyObject"
-- "CSo8NSObject"
 - "CSo16UIViewController"
+- "CSo8NSObject"
+- "PSs9AnyObject"
 - "CSo11UIResponder"
 dynamic-lookup:
 cross-module:

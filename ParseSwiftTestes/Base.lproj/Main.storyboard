@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bWu-2r-POv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pcz-n3-eQl">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Parse é parça-->
         <scene sceneID="Lqc-R6-fzX">
             <objects>
-                <tableViewController id="ThT-p1-awD" customClass="ParseTableViewController" customModule="ParseSwiftTestes" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ThT-p1-awD" customClass="Mini3TableViewController" customModule="ParseSwiftTestes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OO7-lx-Ftu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gq5-J2-Hdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1271" y="17"/>
+            <point key="canvasLocation" x="1145" y="23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="35p-sz-LTm">
@@ -62,6 +62,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j39-ua-A1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="17"/>
+        </scene>
+        <!--Parse Cloud Teste View Controller-->
+        <scene sceneID="Ogu-Ni-qeU">
+            <objects>
+                <viewController id="Pcz-n3-eQl" customClass="ParseCloudTesteViewController" customModule="ParseSwiftTestes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kmu-bR-jXH"/>
+                        <viewControllerLayoutGuide type="bottom" id="6rZ-28-ylS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zr5-mp-E2o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWv-qn-4BN">
+                                <rect key="frame" x="62" y="129" width="197" height="74"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.098039215690000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="qNG-Ut-jNl"/>
+                                    <constraint firstAttribute="height" constant="74" id="wCE-Et-Als"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                <state key="normal" title="retornaJobsons">
+                                    <color key="titleColor" red="0.95686274770000002" green="0.95686274770000002" blue="0.95686274770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="retornaJobsons:" destination="Pcz-n3-eQl" eventType="touchUpInside" id="9zn-Yj-tp5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFk-tN-Nh1">
+                                <rect key="frame" x="62" y="237" width="197" height="74"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.098039215690000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                <state key="normal" title="insereJobson">
+                                    <color key="titleColor" red="0.95686274770000002" green="0.95686274770000002" blue="0.95686274770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="insereJobson:" destination="Pcz-n3-eQl" eventType="touchUpInside" id="nJt-Bh-CR1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XFk-tN-Nh1" firstAttribute="centerY" secondItem="vWv-qn-4BN" secondAttribute="centerY" constant="108" id="87m-Q2-eLg"/>
+                            <constraint firstItem="XFk-tN-Nh1" firstAttribute="height" secondItem="vWv-qn-4BN" secondAttribute="height" id="dOx-Ku-qh0"/>
+                            <constraint firstItem="XFk-tN-Nh1" firstAttribute="top" secondItem="vWv-qn-4BN" secondAttribute="bottom" constant="34" id="joY-eZ-5iR"/>
+                            <constraint firstItem="XFk-tN-Nh1" firstAttribute="centerX" secondItem="vWv-qn-4BN" secondAttribute="centerX" id="n82-Zo-yXw"/>
+                            <constraint firstAttribute="centerX" secondItem="vWv-qn-4BN" secondAttribute="centerX" constant="-0.5" id="nRj-mA-wSD"/>
+                            <constraint firstItem="XFk-tN-Nh1" firstAttribute="width" secondItem="vWv-qn-4BN" secondAttribute="width" id="s5G-nM-QS6"/>
+                            <constraint firstItem="vWv-qn-4BN" firstAttribute="top" secondItem="kmu-bR-jXH" secondAttribute="bottom" constant="109" id="yPC-OK-Vfq"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ptc-xs-xA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="635"/>
         </scene>
     </scenes>
 </document>

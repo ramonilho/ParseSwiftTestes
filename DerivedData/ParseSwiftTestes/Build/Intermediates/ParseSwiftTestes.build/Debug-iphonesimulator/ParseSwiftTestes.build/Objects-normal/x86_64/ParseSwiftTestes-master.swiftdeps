@@ -1,6 +1,9 @@
-version: "Apple Swift version 1.2 (swiftlang-602.0.49.6 clang-602.0.49)"
-options: "03afd71910bfeae8362b7ef5c9040de5"
+version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
+options: "36b32e666df7227a4795a751b2de7cb7"
 inputs: 
+- "/Users/ramonhonorio/Documents/Centro iOS/XCode Projects/Book3-Swift/ParseSwiftTestes/ParseSwiftTestes/OhMyZashTableViewController.swift"
+- "/Users/ramonhonorio/Documents/Centro iOS/XCode Projects/Book3-Swift/ParseSwiftTestes/ParseSwiftTestes/Mini3TableViewController.swift"
 - "/Users/ramonhonorio/Documents/Centro iOS/XCode Projects/Book3-Swift/ParseSwiftTestes/ParseSwiftTestes/ParseTableViewController.swift"
 - "/Users/ramonhonorio/Documents/Centro iOS/XCode Projects/Book3-Swift/ParseSwiftTestes/ParseSwiftTestes/ViewController.swift"
+- "/Users/ramonhonorio/Documents/Centro iOS/XCode Projects/Book3-Swift/ParseSwiftTestes/ParseSwiftTestes/ParseCloudTesteViewController.swift"
 - "/Users/ramonhonorio/Documents/Centro iOS/XCode Projects/Book3-Swift/ParseSwiftTestes/ParseSwiftTestes/AppDelegate.swift"
