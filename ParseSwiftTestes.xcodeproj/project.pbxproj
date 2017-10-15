@@ -31,6 +31,7 @@
 		1884D6E41BA0C62400FE6D89 /* OhMyZashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884D6E31BA0C62400FE6D89 /* OhMyZashTableViewController.swift */; };
 		1884D6E61BA0C99700FE6D89 /* ParseCloudTesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884D6E51BA0C99700FE6D89 /* ParseCloudTesteViewController.swift */; };
 		188983331B557F160088A03C /* Mini3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188983321B557F160088A03C /* Mini3TableViewController.swift */; };
+		F210BC011F93C2B700FD9C6D /* arquivoparafazerpullrequesteganharacamisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F210BC001F93C2B700FD9C6D /* arquivoparafazerpullrequesteganharacamisa.swift */; };
 		F2F4CBB91F93AC850026B502 /* arquivodesnecessarioparafazerumpullrequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F4CBB81F93AC850026B502 /* arquivodesnecessarioparafazerumpullrequest.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		1884D6E31BA0C62400FE6D89 /* OhMyZashTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OhMyZashTableViewController.swift; sourceTree = "<group>"; };
 		1884D6E51BA0C99700FE6D89 /* ParseCloudTesteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseCloudTesteViewController.swift; sourceTree = "<group>"; };
 		188983321B557F160088A03C /* Mini3TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mini3TableViewController.swift; sourceTree = "<group>"; };
+		F210BC001F93C2B700FD9C6D /* arquivoparafazerpullrequesteganharacamisa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arquivoparafazerpullrequesteganharacamisa.swift; sourceTree = "<group>"; };
 		F2F4CBB81F93AC850026B502 /* arquivodesnecessarioparafazerumpullrequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arquivodesnecessarioparafazerumpullrequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 				1866D3651B1273BA0088FA50 /* ParseTableViewController.swift */,
 				188983321B557F160088A03C /* Mini3TableViewController.swift */,
 				F2F4CBB81F93AC850026B502 /* arquivodesnecessarioparafazerumpullrequest.swift */,
+				F210BC001F93C2B700FD9C6D /* arquivoparafazerpullrequesteganharacamisa.swift */,
 			);
 			path = ParseSwiftTestes;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F210BC011F93C2B700FD9C6D /* arquivoparafazerpullrequesteganharacamisa.swift in Sources */,
 				1884D6E41BA0C62400FE6D89 /* OhMyZashTableViewController.swift in Sources */,
 				188983331B557F160088A03C /* Mini3TableViewController.swift in Sources */,
 				1866D3661B1273BA0088FA50 /* ParseTableViewController.swift in Sources */,
