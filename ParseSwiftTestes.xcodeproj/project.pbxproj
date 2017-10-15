@@ -27,12 +27,11 @@
 		1866D35A1B123B360088FA50 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866D3591B123B360088FA50 /* Security.framework */; };
 		1866D35C1B123B3D0088FA50 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866D35B1B123B3D0088FA50 /* StoreKit.framework */; };
 		1866D35E1B123B430088FA50 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866D35D1B123B430088FA50 /* SystemConfiguration.framework */; };
-		1866D3601B123B490088FA50 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866D35F1B123B490088FA50 /* libz.dylib */; };
-		1866D3621B123B4E0088FA50 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866D3611B123B4E0088FA50 /* libsqlite3.dylib */; };
 		1866D3661B1273BA0088FA50 /* ParseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866D3651B1273BA0088FA50 /* ParseTableViewController.swift */; };
 		1884D6E41BA0C62400FE6D89 /* OhMyZashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884D6E31BA0C62400FE6D89 /* OhMyZashTableViewController.swift */; };
 		1884D6E61BA0C99700FE6D89 /* ParseCloudTesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884D6E51BA0C99700FE6D89 /* ParseCloudTesteViewController.swift */; };
 		188983331B557F160088A03C /* Mini3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188983321B557F160088A03C /* Mini3TableViewController.swift */; };
+		F2F4CBB91F93AC850026B502 /* arquivodesnecessarioparafazerumpullrequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F4CBB81F93AC850026B502 /* arquivodesnecessarioparafazerumpullrequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,12 +69,11 @@
 		1866D3591B123B360088FA50 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		1866D35B1B123B3D0088FA50 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1866D35D1B123B430088FA50 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		1866D35F1B123B490088FA50 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		1866D3611B123B4E0088FA50 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		1866D3651B1273BA0088FA50 /* ParseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseTableViewController.swift; sourceTree = "<group>"; };
 		1884D6E31BA0C62400FE6D89 /* OhMyZashTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OhMyZashTableViewController.swift; sourceTree = "<group>"; };
 		1884D6E51BA0C99700FE6D89 /* ParseCloudTesteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseCloudTesteViewController.swift; sourceTree = "<group>"; };
 		188983321B557F160088A03C /* Mini3TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mini3TableViewController.swift; sourceTree = "<group>"; };
+		F2F4CBB81F93AC850026B502 /* arquivodesnecessarioparafazerumpullrequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arquivodesnecessarioparafazerumpullrequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1866D3621B123B4E0088FA50 /* libsqlite3.dylib in Frameworks */,
-				1866D3601B123B490088FA50 /* libz.dylib in Frameworks */,
 				1866D35E1B123B430088FA50 /* SystemConfiguration.framework in Frameworks */,
 				1866D35C1B123B3D0088FA50 /* StoreKit.framework in Frameworks */,
 				1866D35A1B123B360088FA50 /* Security.framework in Frameworks */,
@@ -145,6 +141,7 @@
 				1884D6E31BA0C62400FE6D89 /* OhMyZashTableViewController.swift */,
 				1866D3651B1273BA0088FA50 /* ParseTableViewController.swift */,
 				188983321B557F160088A03C /* Mini3TableViewController.swift */,
+				F2F4CBB81F93AC850026B502 /* arquivodesnecessarioparafazerumpullrequest.swift */,
 			);
 			path = ParseSwiftTestes;
 			sourceTree = "<group>";
@@ -176,8 +173,6 @@
 		1866D34C1B123ADA0088FA50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1866D3611B123B4E0088FA50 /* libsqlite3.dylib */,
-				1866D35F1B123B490088FA50 /* libz.dylib */,
 				1866D35D1B123B430088FA50 /* SystemConfiguration.framework */,
 				1866D35B1B123B3D0088FA50 /* StoreKit.framework */,
 				1866D3591B123B360088FA50 /* Security.framework */,
@@ -246,6 +241,7 @@
 				TargetAttributes = {
 					1866D3171B123A900088FA50 = {
 						CreatedOnToolsVersion = 6.3.1;
+						ProvisioningStyle = Automatic;
 					};
 					1866D32F1B123A900088FA50 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -303,6 +299,7 @@
 				1866D3231B123A900088FA50 /* ViewController.swift in Sources */,
 				1884D6E61BA0C99700FE6D89 /* ParseCloudTesteViewController.swift in Sources */,
 				1866D31E1B123A900088FA50 /* AppDelegate.swift in Sources */,
+				F2F4CBB91F93AC850026B502 /* arquivodesnecessarioparafazerumpullrequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,13 +428,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ramon Honorio (JRZ3396N7C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ParseSwiftTestes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -446,13 +448,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ramon Honorio (JRZ3396N7C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ParseSwiftTestes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
